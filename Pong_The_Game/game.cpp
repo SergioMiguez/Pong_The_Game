@@ -89,8 +89,8 @@ internal void simulate_game(Input* input, float dt) {
 			}
 			else {
 				player_2_ddp = (ball_p_y - player_2_p) * 100;
-				if (player_2_ddp > 1300) player_2_ddp = 1300;
-				if (player_2_ddp < -1300) player_2_ddp = -1300;
+				if (player_2_ddp > 430) player_2_ddp = 430;
+				if (player_2_ddp < -430) player_2_ddp = -430;
 			}
 
 			simulate_player(&player_2_p, &player_2_dp, player_2_ddp, dt);
@@ -173,6 +173,9 @@ internal void simulate_game(Input* input, float dt) {
 			draw_rect(20, 0, 5, 0.10, 0xff88);
 			draw_rect(-20, 0, 10, 10, 0xffffff);
 			draw_rect(-20, 0, 1, 6, 0xff88);
+
+			draw_text("UP   W", -26, -25, 0.30, 0xff88);
+			draw_text("DOWN S", -26, -30, 0.30, 0xff88);
 		}
 		else {
 			draw_text("MULTIPLAYER", 2, 20, 0.5, 0xff88);
@@ -186,9 +189,16 @@ internal void simulate_game(Input* input, float dt) {
 			draw_rect(20, 0 - 3 * 2.f, 5, 0.25, 0xff88);
 			draw_rect(20, 0 + 3 * 2.f, 5, 0.25, 0xff88);
 			draw_rect(20, 0, 5, 0.10, 0xff88);
+
+			draw_text("UP   P1 W  P2 ARROW UP  ", 3, -25, 0.30, 0xff88);   //// CORRECT ADD NUMBERS TO TEXT
+			draw_text("DOWN P1 S  P2 ARROW DOWN", 3, -30, 0.30, 0xff88);
 			
 		}
 		draw_text("PONG: THE GAME!", -50, 40, 1.1, 0xfffff);
-		draw_text("SERGIO MIGUEZ APARICIO", 40, -42, 0.2, 0xff88);
+		draw_text("SERGIO MIGUEZ APARICIO - V1.1", 40, -42, 0.2, 0xff88);
+		draw_text("CONTROLS", -75, -20, 0.35, 0xfffff);
+		draw_text("LEFT RIGHT ARROWS", -80, -25, 0.30, 0xffff00);
+		draw_text("ENTER SELECT", -80, -30, 0.30, 0xffff00);
+		
 	}
 }

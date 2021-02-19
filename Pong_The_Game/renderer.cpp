@@ -83,6 +83,17 @@ internal void draw_text(const char *text, float x, float y, float size, u32 colo
 			if (*text == 46) letter = letters[26];
 			else if (*text == 58) letter = letters[27];
 			else if (*text == 33) letter = letters[28];
+			else if (*text == 48) letter = letters[29];
+			else if (*text == 49) letter = letters[30];
+			else if (*text == 50) letter = letters[31];
+			else if (*text == 51) letter = letters[32];
+			else if (*text == 52) letter = letters[33];
+			else if (*text == 53) letter = letters[34];
+			else if (*text == 54) letter = letters[35];
+			else if (*text == 55) letter = letters[36];
+			else if (*text == 56) letter = letters[37];
+			else if (*text == 57) letter = letters[38];
+			else if (*text == 45) letter = letters[39];
 			else letter = letters[*text - 'A'];
 			float original_x = x;
 			for (int i = 0; i < 7; i++) {
